@@ -1,0 +1,13 @@
+services:
+  backend:
+    extends:
+      file: ./backend/docker-compose.yml
+      service: app
+
+  frontend:
+    extends:
+      file: ./frontend/docker-compose.yml
+      service: web
+    depends_on:
+      backend:
+        condition: service_started

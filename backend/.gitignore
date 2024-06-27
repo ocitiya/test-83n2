@@ -1,0 +1,7 @@
+.env
+__pycache__
+requirements.txt
+.key
+venv
+static
+passenger_wsgi.py
