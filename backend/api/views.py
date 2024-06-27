@@ -9,6 +9,7 @@ from data.api_response import ApiResponse
 def post(request):
     serializer = serializers.PersonSerializer(data=request.data)
     if serializer.is_valid():
+        serializer.save()
         return Response(ApiResponse(success=True, message="Data accepted!", data=serializer.data).json())
     return Response(ApiResponse(message="Some data is not valid!", data=serializer.errors).json())
 

@@ -15,3 +15,6 @@ class Person(models.Model):
     email = models.EmailField()
     date_of_birth = models.DateField()
 
+    class Meta:
+        db_table = 'persons'
+
